@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimePc - Лучшие игровые компьютеры</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <div class="logo"><span style="color: #1A3B4F;">Prime</span><span style="color: #64B6AC;">Pc</span></div>
+        <ul class="nav-links">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/catalog">Каталог</a></li>
+            <li><a href="/cart">Корзина</a></li>
+            <li><a href="/faq">FAQ</a></li>
+        </ul>
+    </div>
+    <div class="header-contacts">
+        <a href="https://t.me/primepc_support" class="contact-header-item telegram" target="_blank">
+            <span class="icon">✈️</span>
+            <span>@primepc</span>
+        </a>
+        <a href="tel:88005004020" class="contact-header-item phone">
+            <span class="icon">📞</span>
+            <span>8 (800) 500-40-20</span>
+        </a>
+    </div>
+</header>
+
+<main>
+    <!-- Герой-секция -->
+    <section class="hero">
+        <h1><span style="color: #64B6AC;">PrimePc</span> - игровые компьютеры</h1>
+        <p>Свежий дизайн, мощные комплектующие, премиальное качество</p>
+        <a href="/catalog" class="btn">Смотреть каталог</a>
+        <a href="/faq" class="btn btn-outline" style="margin-left: 1rem;">FAQ</a>
+    </section>
+
+    <!-- БЛОК С ФОТО И ОПИСАНИЕМ ФЛАГМАНА -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin: 2rem 0 4rem 0;">
+        <div>
+            <img src="/images/gp.png" alt="PrimePc Computers" style="max-width: 90%; height: auto; border-radius: 8px; display: block;">
+        </div>
+        <div style="padding: 2rem 0;">
+            <h3 style="color: #64B6AC; font-size: 2rem; margin-bottom: 1.5rem;">Флагман PrimePc</h3>
+            <div style="margin-bottom: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <span style="color: #64B6AC; font-size: 1.5rem;">▶</span>
+                    <span style="color: white; font-size: 1.1rem;">Процессор: <strong style="color: #64B6AC;">Intel Core i9-14900K</strong> (24 ядра, до 6.0 ГГц)</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <span style="color: #64B6AC; font-size: 1.5rem;">▶</span>
+                    <span style="color: white; font-size: 1.1rem;">Видеокарта: <strong style="color: #64B6AC;">NVIDIA RTX 4090 24GB</strong></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <span style="color: #64B6AC; font-size: 1.5rem;">▶</span>
+                    <span style="color: white; font-size: 1.1rem;">ОЗУ: <strong style="color: #64B6AC;">64GB DDR5 6000MHz</strong></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <span style="color: #64B6AC; font-size: 1.5rem;">▶</span>
+                    <span style="color: white; font-size: 1.1rem;">Накопитель: <strong style="color: #64B6AC;">2TB NVMe SSD + 4TB HDD</strong></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <span style="color: #64B6AC; font-size: 1.5rem;">▶</span>
+                    <span style="color: white; font-size: 1.1rem;">Охлаждение: <strong style="color: #64B6AC;">Жидкостное NZXT Kraken 360</strong></span>
+                </div>
+            </div>
+            <div style="background: #0F2A36; padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem;">
+                <p style="color: #A0B8C5; font-size: 1rem; line-height: 1.6; margin-bottom: 0.5rem;">Максимальная производительность для игр и работы</p>
+                <p style="color: #A0B8C5; font-size: 1rem; line-height: 1.6; margin-bottom: 0.5rem;">4K гейминг на ультра настройках — 120+ FPS</p>
+                <p style="color: #A0B8C5; font-size: 1rem; line-height: 1.6;">Сборка, установка Windows и драйверов — бесплатно</p>
+            </div>
+            <div style="margin-top: 2rem; text-align: center;">
+                <span style="font-size: 2rem; font-weight: 700; color: #64B6AC;">249 990 ₽</span>
+                <a href="/catalog" class="btn" style="margin-left: 1rem; padding: 0.8rem 2rem;">Купить</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Преимущества -->
+    <h2>Почему выбирают PrimePc</h2>
+    <section class="features">
+        <div class="feature">
+            <div class="icon"></div>
+            <h3>Мощь</h3>
+            <p>Топовые комплектующие для любых задач — от офисной работы до требовательных игр и 3D-моделирования. Ваш компьютер справится с любым уровнем нагрузки.</p>
+        </div>
+        <div class="feature">
+            <div class="icon"></div>
+            <h3>Дизайн</h3>
+            <p>Мятный и синий — свежий премиальный стиль, который выделит ваш ПК среди других. Аккуратная сборка, минимализм и внимание к деталям.</p>
+        </div>
+        <div class="feature">
+            <div class="icon"></div>
+            <h3>Гарантия</h3>
+            <p>3 года гарантии на все компьютеры. Бесплатная диагностика и замена комплектующих в случае неисправности. Вы всегда под защитой.</p>
+        </div>
+        <div class="feature">
+            <div class="icon"></div>
+            <h3>Поддержка</h3>
+            <p>Поможем с выбором 24/7. Ответим на любые вопросы, поможем собрать индивидуальную конфигурацию и настроить ПО удалённо.</p>
+        </div>
+    </section>
+
+    <!-- Лучшие компьютеры - ТОП 5 -->
+    <h2>Лучшие компьютеры</h2>
+    <div class="product-grid">
+        <!-- 1. All-round Performer -->
+        <div class="product-card">
+            <a href="/product/1" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/2.png" alt="All-round Performer">
+                </div>
+                <h3>All-round Performer</h3>
+                <p>Intel Core i5-13600KF, RTX 4070 Super, 32GB DDR5</p>
+                <div class="price">145 000 ₽</div>
+            </a>
+            <a href="/product/1" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 2. AMD Value King -->
+        <div class="product-card">
+            <a href="/product/2" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/3.png" alt="AMD Value King">
+                </div>
+                <h3>AMD Value King</h3>
+                <p>Ryzen 5 7600X, RX 7900 GRE, 32GB DDR5</p>
+                <div class="price">140 000 ₽</div>
+            </a>
+            <a href="/product/2" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 3. X3D Rocket -->
+        <div class="product-card">
+            <a href="/product/3" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/4.png" alt="X3D Rocket">
+                </div>
+                <h3>X3D Rocket</h3>
+                <p>Ryzen 7 7800X3D, RX 7900 XT, 32GB DDR5</p>
+                <div class="price">185 000 ₽</div>
+            </a>
+            <a href="/product/3" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 4. RTX Powerhouse -->
+        <div class="product-card">
+            <a href="/product/4" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/5.png" alt="RTX Powerhouse">
+                </div>
+                <h3>RTX Powerhouse</h3>
+                <p>Intel Core i7-13700KF, RTX 4070 Ti Super, 32GB DDR5</p>
+                <div class="price">215 000 ₽</div>
+            </a>
+            <a href="/product/4" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 5. Future Proof -->
+        <div class="product-card">
+            <a href="/product/5" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/6.png" alt="Future Proof">
+                </div>
+                <h3>Future Proof</h3>
+                <p>Ryzen 9 7900, RX 7900 GRE, 32GB DDR5</p>
+                <div class="price">165 000 ₽</div>
+            </a>
+            <a href="/product/5" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+    </div>
+
+    <!-- FAQ превью -->
+    <section style="margin-top: 4rem;">
+        <h2>Частые вопросы</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>Можно в рассрочку?</h3>
+                <p>Да, для клиентов от 18 лет. Рассрочка на 3-12 месяцев без первого взноса.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Потянет ли Cyberpunk?</h3>
+                <p>Любая модель из каталога запускает Cyberpunk на ультрах.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Сколько стоит сборка?</h3>
+                <p>Сборка, установка Windows и драйверов — бесплатно.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Доставка</h3>
+                <p>По Москве и СПб — 1 день, в регионы — 2-5 дней.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="/faq" class="btn btn-outline">Все вопросы</a>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contact-section">
+        <h2>Связь с нами</h2>
+        <div class="contact-chips">
+            <a href="tel:88005004020" class="contact-chip">📞 8 (800) 500-40-20</a>
+            <a href="https://t.me/primepc_support" class="contact-chip" target="_blank">✈️ @primepc</a>
+            <a href="mailto:support@primepc.ru" class="contact-chip">📧 support@primepc.ru</a>
+        </div>
+        <p style="margin-top: 2rem; color: #5E6F7D;">Работаем ежедневно с 10:00 до 22:00 по МСК</p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 PrimePc — компьютер твоей мечты!</p>
+</footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html>

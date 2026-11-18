@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pageTitle}">FAQ — PrimePc</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <div class="logo"><span style="color: #1A3B4F;">Prime</span><span style="color: #64B6AC;">Pc</span></div>
+        <ul class="nav-links">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/catalog">Каталог</a></li>
+            <li><a href="/cart">Корзина</a></li>
+            <li><a href="/faq">FAQ</a></li>
+        </ul>
+    </div>
+    <div class="header-contacts">
+        <a href="https://t.me/primepc_support" class="contact-header-item telegram" target="_blank">
+            <span class="icon">✈️</span>
+            <span>@primepc</span>
+        </a>
+        <a href="tel:88005004020" class="contact-header-item phone">
+            <span class="icon">📞</span>
+            <span>8 (800) 500-40-20</span>
+        </a>
+    </div>
+</header>
+
+<main>
+    <h1>Часто задаваемые вопросы</h1>
+
+    <!-- Поиск по FAQ - ИСПРАВЛЕН -->
+    <div class="search-faq" style="margin: 2rem 0;">
+        <input type="text"
+               placeholder="🔍 Поиск по вопросам..."
+               id="faqSearch"
+               style="width: 100%;
+                      padding: 1rem;
+                      background: #1E3A4A;
+                      border: 2px solid #64B6AC;
+                      border-radius: 8px;
+                      color: white;
+                      font-size: 1.1rem;">
+    </div>
+
+    <div class="faq-grid" id="faqList">
+        <div class="faq-item">
+            <h3>🔧 Даёте ли гарантию?</h3>
+            <p>Да, 3 года гарантии на все комплектующие. Бесплатная диагностика в течение всего срока.</p>
+        </div>
+        <div class="faq-item">
+            <h3>💻 Можно ли собрать свой уникальный ПК?</h3>
+            <p>Конечно! Приезжайте в шоурум или напишите в Telegram, мы соберём конфигурацию под любой бюджет.</p>
+        </div>
+        <div class="faq-item">
+            <h3>🎧 Есть ли игровые аксессуары?</h3>
+            <p>На данный момент еще нет, но скоро мы запустим продажу перефирии!</p>
+        </div>
+        <div class="faq-item">
+            <h3>🆓 Доставка бесплатная?</h3>
+            <p>При заказе от 50 000 ₽ — доставка по Москве и СПб бесплатно. В другие регионы — от 500 ₽.</p>
+        </div>
+        <div class="faq-item">
+            <h3>🧑‍💻 Нужна помощь с выбором?</h3>
+            <p>Напиши нам в Telegram @primepc, мы ответим за 5 минут и поможем выбрать ПК под твои игры.</p>
+        </div>
+        <div class="faq-item">
+            <h3>💳 Какие способы оплаты?</h3>
+            <p>Карты, перевод на счет, наличные при получении.</p>
+        </div>
+        <div class="faq-item">
+            <h3>🌿 В мятном цвете есть модели?</h3>
+            <p>Да! Мы можем собрать любой компьютер в мятном корпусе или с мятными акцентами. Уточняйте при заказе.</p>
+        </div>
+        <div class="faq-item">
+            <h3>⚡ Можно ли апгрейдить потом?</h3>
+            <p>Все наши компьютеры собраны на стандартных комплектующих - вы сможете заменить любую деталь самостоятельно.</p>
+        </div>
+    </div>
+
+    <!-- Простой поиск на JavaScript -->
+    <script>
+        document.getElementById('faqSearch').addEventListener('keyup', function() {
+            let searchText = this.value.toLowerCase();
+            let items = document.querySelectorAll('.faq-item');
+
+            items.forEach(item => {
+                let text = item.textContent.toLowerCase();
+                if (text.includes(searchText)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <section class="contact-section">
+        <h2>Остались вопросы?</h2>
+        <p style="font-size: 1.2rem; margin: 1.5rem 0; color: #A0B8C5;">Мы на связи во всех мессенджерах</p>
+        <div class="contact-chips">
+            <a href="tel:88005004020" class="contact-chip">📞 8 (800) 500-40-20</a>
+            <a href="https://t.me/primepc_support" class="contact-chip" target="_blank">✈️ @primepc</a>
+            <a href="mailto:support@primepc.ru" class="contact-chip">📧 support@primepc.ru</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 PrimePc — компьютер твоей мечты!</p>
+</footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html>

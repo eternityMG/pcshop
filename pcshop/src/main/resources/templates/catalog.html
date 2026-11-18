@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог — PrimePc</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <div class="logo"><span style="color: #1A3B4F;">Prime</span><span style="color: #64B6AC;">Pc</span></div>
+        <ul class="nav-links">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/catalog">Каталог</a></li>
+            <li><a href="/cart">Корзина</a></li>
+            <li><a href="/faq">FAQ</a></li>
+        </ul>
+    </div>
+    <div class="header-contacts">
+        <a href="https://t.me/primepc_support" class="contact-header-item telegram" target="_blank">
+            <span class="icon">✈️</span>
+            <span>@primepc</span>
+        </a>
+        <a href="tel:88005004020" class="contact-header-item phone">
+            <span class="icon">📞</span>
+            <span>8 (800) 500-40-20</span>
+        </a>
+    </div>
+</header>
+
+<main>
+    <h1>Каталог компьютеров</h1>
+
+    <div class="product-grid">
+        <!-- 1. All-round Performer (фото 2.png) -->
+        <div class="product-card">
+            <a href="/product/1" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/2.png" alt="All-round Performer" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>All-round Performer</h3>
+                <p>Intel Core i5-13600KF, RTX 4070 Super, 32GB DDR5</p>
+                <div class="price">145 000 ₽</div>
+            </a>
+            <a href="/product/1" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 2. AMD Value King (фото 3.png) -->
+        <div class="product-card">
+            <a href="/product/2" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/3.png" alt="AMD Value King" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>AMD Value King</h3>
+                <p>Ryzen 5 7600X, RX 7900 GRE, 32GB DDR5</p>
+                <div class="price">140 000 ₽</div>
+            </a>
+            <a href="/product/2" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 3. X3D Rocket (фото 4.png) -->
+        <div class="product-card">
+            <a href="/product/3" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/4.png" alt="X3D Rocket" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>X3D Rocket</h3>
+                <p>Ryzen 7 7800X3D, RX 7900 XT, 32GB DDR5</p>
+                <div class="price">185 000 ₽</div>
+            </a>
+            <a href="/product/3" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 4. RTX Powerhouse (фото 5.png) -->
+        <div class="product-card">
+            <a href="/product/4" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/5.png" alt="RTX Powerhouse" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>RTX Powerhouse</h3>
+                <p>Intel Core i7-13700KF, RTX 4070 Ti Super, 32GB DDR5</p>
+                <div class="price">215 000 ₽</div>
+            </a>
+            <a href="/product/4" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 5. Future Proof (фото 6.png) -->
+        <div class="product-card">
+            <a href="/product/5" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/6.png" alt="Future Proof" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>Future Proof</h3>
+                <p>Ryzen 9 7900, RX 7900 GRE, 32GB DDR5</p>
+                <div class="price">165 000 ₽</div>
+            </a>
+            <a href="/product/5" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 6. Budget Destroyer (фото 7.png) -->
+        <div class="product-card">
+            <a href="/product/6" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/7.png" alt="Budget Destroyer" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>Budget Destroyer</h3>
+                <p>Intel Core i5-13400F, RX 7700 XT, 32GB DDR4</p>
+                <div class="price">105 000 ₽</div>
+            </a>
+            <a href="/product/6" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 7. White Aesthetic (фото 8.png) -->
+        <div class="product-card">
+            <a href="/product/7" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/8.png" alt="White Aesthetic" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>White Aesthetic</h3>
+                <p>Ryzen 5 7500F, RX 7800 XT, 32GB DDR5</p>
+                <div class="price">130 000 ₽</div>
+            </a>
+            <a href="/product/7" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 8. Small Form Factor (фото 9.png) -->
+        <div class="product-card">
+            <a href="/product/8" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/9.png" alt="Small Form Factor" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>Small Form Factor</h3>
+                <p>Intel Core i5-13500, RTX 4060 Ti 16GB, 32GB DDR5</p>
+                <div class="price">135 000 ₽</div>
+            </a>
+            <a href="/product/8" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 9. No RGB Pure Performance (фото 10.png) -->
+        <div class="product-card">
+            <a href="/product/9" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/10.png" alt="No RGB Pure Performance" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>No RGB Pure Performance</h3>
+                <p>Intel Core i7-12700KF, RX 7900 GRE, 32GB DDR4</p>
+                <div class="price">150 000 ₽</div>
+            </a>
+            <a href="/product/9" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 10. NVIDIA Focus (фото 11.png) -->
+        <div class="product-card">
+            <a href="/product/10" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/11.png" alt="NVIDIA Focus" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>NVIDIA Focus</h3>
+                <p>Ryzen 5 7600, RTX 4070, 32GB DDR5</p>
+                <div class="price">125 000 ₽</div>
+            </a>
+            <a href="/product/10" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 11. Streaming & Recording (фото 12.png) -->
+        <div class="product-card">
+            <a href="/product/11" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/12.png" alt="Streaming & Recording" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>Streaming & Recording</h3>
+                <p>Intel Core i7-13700, RTX 4070 Super, 32GB DDR5</p>
+                <div class="price">170 000 ₽</div>
+            </a>
+            <a href="/product/11" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 12. Compact Power ITX (фото 13.png) -->
+        <div class="product-card">
+            <a href="/product/12" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/13.png" alt="Compact Power ITX" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>Compact Power ITX</h3>
+                <p>Ryzen 7 7800X3D, RTX 4070 Super, 32GB DDR5</p>
+                <div class="price">200 000 ₽</div>
+            </a>
+            <a href="/product/12" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 13. High Refresh eSports (фото 14.png) -->
+        <div class="product-card">
+            <a href="/product/13" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/14.png" alt="High Refresh eSports" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>High Refresh eSports</h3>
+                <p>Intel Core i5-14600KF, RX 7700 XT, 32GB DDR5</p>
+                <div class="price">140 000 ₽</div>
+            </a>
+            <a href="/product/13" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 14. Quiet Workstation (фото 15.png) -->
+        <div class="product-card">
+            <a href="/product/14" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/15.png" alt="Quiet Workstation" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>Quiet Workstation</h3>
+                <p>Ryzen 9 7900X, RTX 4070 Ti Super, 64GB DDR5</p>
+                <div class="price">230 000 ₽</div>
+            </a>
+            <a href="/product/14" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+
+        <!-- 15. Best Value DDR4 (фото 16.png) -->
+        <div class="product-card">
+            <a href="/product/15" style="text-decoration: none; color: inherit;">
+                <div class="product-image">
+                    <img src="/images/16.png" alt="Best Value DDR4" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>Best Value DDR4</h3>
+                <p>Intel Core i5-12600KF, RX 7800 XT, 32GB DDR4</p>
+                <div class="price">120 000 ₽</div>
+            </a>
+            <a href="/product/15" class="btn" style="display: block; text-align: center; margin-top: 1rem;">Подробнее</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 PrimePc — компьютер твоей мечты!</p>
+</footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pageTitle}">Корзина — PrimePc</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <div class="logo"><span style="color: #1A3B4F;">Prime</span><span style="color: #64B6AC;">Pc</span></div>
+        <ul class="nav-links">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/catalog">Каталог</a></li>
+            <li><a href="/cart">Корзина</a></li>
+            <li><a href="/faq">FAQ</a></li>
+        </ul>
+    </div>
+    <div class="header-contacts">
+        <a href="https://t.me/primepc_support" class="contact-header-item telegram" target="_blank">
+            <span class="icon">✈️</span>
+            <span>@primepc</span>
+        </a>
+        <a href="tel:88005004020" class="contact-header-item phone">
+            <span class="icon">📞</span>
+            <span>8 (800) 500-40-20</span>
+        </a>
+    </div>
+</header>
+
+<main>
+    <h1>Корзина</h1>
+
+    <!-- ПУСТАЯ КОРЗИНА -->
+    <div th:if="${cart.isEmpty()}" style="text-align: center; padding: 3rem 2rem;">
+        <h2 style="margin: 1.5rem 0; color: #1A3B4F;">Корзина пуста</h2>
+        <p style="color: #5E6F7D; max-width: 400px; margin: 0 auto 2rem;">Добавьте товары из каталога, чтобы собрать компьютер своей мечты</p>
+        <a href="/catalog" class="btn" style="margin-top: 2rem; display: inline-block;">Перейти в каталог</a>
+    </div>
+
+    <!-- ПОЛНАЯ КОРЗИНА -->
+    <div th:unless="${cart.isEmpty()}">
+        <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem;">
+
+            <!-- ЛЕВАЯ КОЛОНКА: ТОВАРЫ -->
+            <div style="background: #1E3A4A; border-radius: 8px; padding: 2rem;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                    <tr style="border-bottom: 2px solid #64B6AC;">
+                        <th style="padding: 1rem; text-align: left; color: white;">Товар</th>
+                        <th style="padding: 1rem; text-align: left; color: white;">Цена</th>
+                        <th style="padding: 1rem; text-align: left; color: white;">Количество</th>
+                        <th style="padding: 1rem; text-align: left; color: white;">Сумма</th>
+                        <th style="padding: 1rem; text-align: left; color: white;"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="item : ${cart.items}" style="border-bottom: 1px solid #2C4A5A;">
+                        <td style="padding: 1rem;">
+                            <strong th:text="${item.product.name}" style="color: white;">CyberBlack X1</strong>
+                        </td>
+                        <td style="padding: 1rem; color: #64B6AC; font-weight: 600;" th:text="${item.product.price}">89 990 ₽</td>
+                        <td style="padding: 1rem;">
+                            <form th:action="@{'/cart/update/' + ${item.product.id}}" method="post" style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="number" name="quantity" th:value="${item.quantity}" min="1" style="width: 70px; padding: 0.5rem; background: #0F2A36; border: 1px solid #64B6AC; color: white; border-radius: 4px;">
+                                <button type="submit" style="background: #64B6AC; border: none; color: #1A3B4F; cursor: pointer; padding: 0.5rem 1rem; border-radius: 4px;">✓</button>
+                            </form>
+                        </td>
+                        <td style="padding: 1rem; color: white; font-weight: 600;" th:text="${item.totalPrice} + ' ₽'">89 990 ₽</td>
+                        <td style="padding: 1rem;">
+                            <form th:action="@{'/cart/remove/' + ${item.product.id}}" method="post">
+                                <button type="submit" style="background: #64B6AC; border: none; color: #1A3B4F; cursor: pointer; padding: 0.5rem 1rem; border-radius: 4px;">✕</button>
+                            </form>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ПРАВАЯ КОЛОНКА: ДЕТАЛИ ЗАКАЗА -->
+            <div>
+                <div style="background: #1E3A4A; border-radius: 8px; padding: 2rem; margin-bottom: 1.5rem;">
+                    <h3 style="color: #64B6AC; margin-bottom: 1.5rem; border-bottom: 2px solid #64B6AC; padding-bottom: 0.5rem;">Детали заказа</h3>
+
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem;">
+                            <span style="color: #A0B8C5;">Сумма товаров:</span>
+                            <span style="color: white; font-weight: 600;" th:text="${cart.totalAmount} + ' ₽'">0 ₽</span>
+                        </div>
+                        <div style="border-top: 2px solid #2C4A5A; margin: 1rem 0; padding-top: 1rem;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: white; font-size: 1.2rem; font-weight: 600;">Итого:</span>
+                                <span style="color: #64B6AC; font-size: 1.5rem; font-weight: 700;" th:text="${cart.totalAmount} + ' ₽'">0 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1.5rem;">
+                        <label style="color: white; display: block; margin-bottom: 0.5rem;">Комментарий к заказу:</label>
+                        <textarea rows="3" style="width: 100%; padding: 0.8rem; background: #0F2A36; border: 1px solid #64B6AC; border-radius: 4px; color: white;" placeholder="Напишите пожелания по сборке, удобное время доставки..."></textarea>
+                    </div>
+                </div>
+
+                <div style="background: #1E3A4A; border-radius: 8px; padding: 1.5rem;">
+                    <h3 style="color: #64B6AC; margin-bottom: 1rem;">Почему покупают у нас</h3>
+                    <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
+                        <span>🛡️</span>
+                        <div><div style="color: white;">3 года гарантии</div><div style="color: #A0B8C5; font-size: 0.85rem;">Бесплатная диагностика</div></div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
+                        <span>🔄</span>
+                        <div><div style="color: white;">14 дней на возврат</div><div style="color: #A0B8C5; font-size: 0.85rem;">Если передумали — вернём деньги</div></div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
+                        <span>🔧</span>
+                        <div><div style="color: white;">Бесплатная сборка</div><div style="color: #A0B8C5; font-size: 0.85rem;">Установка Windows</div></div>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <form th:action="@{'/cart/clear'}" method="post" style="flex: 1;">
+                        <button type="submit" class="btn btn-outline" style="width: 100%; background: #0F2A36; border-color: #64B6AC; color: white;">Очистить</button>
+                    </form>
+                    <a href="/checkout" class="btn" style="flex: 2; text-align: center;">Оформить заказ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 PrimePc — компьютер твоей мечты!</p>
+</footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html>

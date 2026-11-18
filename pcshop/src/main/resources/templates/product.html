@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-round Performer — PrimePc</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <div class="logo"><span style="color: #1A3B4F;">Prime</span><span style="color: #64B6AC;">Pc</span></div>
+        <ul class="nav-links">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/catalog">Каталог</a></li>
+            <li><a href="/cart">Корзина</a></li>
+            <li><a href="/faq">FAQ</a></li>
+        </ul>
+    </div>
+    <div class="header-contacts">
+        <a href="https://t.me/primepc_support" class="contact-header-item telegram" target="_blank">
+            <span class="icon">✈️</span>
+            <span>@primepc</span>
+        </a>
+        <a href="tel:88005004020" class="contact-header-item phone">
+            <span class="icon">📞</span>
+            <span>8 (800) 500-40-20</span>
+        </a>
+    </div>
+</header>
+
+<main>
+    <div style="margin-bottom: 2rem;">
+        <a href="/catalog" style="color: #64B6AC; text-decoration: none;">← Вернуться в каталог</a>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+        <div style="background: #1E3A4A; border-radius: 8px; padding: 2rem; display: flex; align-items: center; justify-content: center; min-height: 400px;">
+            <div style="text-align: center;">
+                <span style="font-size: 5rem; color: #64B6AC;">🖥️</span>
+                <p style="color: #A0B8C5; margin-top: 1rem;">All-round Performer</p>
+            </div>
+        </div>
+
+        <div>
+            <h1 style="border-left-color: #64B6AC;">All-round Performer</h1>
+            <div style="font-size: 2.5rem; font-weight: 700; color: #64B6AC; margin: 1.5rem 0;">145 000 ₽</div>
+
+            <div style="background: #1E3A4A; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                <h3 style="color: white; margin-bottom: 1rem;">Характеристики:</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #2C4A5A; color: #A0B8C5;"><span style="color: #64B6AC; margin-right: 0.5rem;">▶</span> Процессор: Intel Core i5-13600KF</li>
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #2C4A5A; color: #A0B8C5;"><span style="color: #64B6AC; margin-right: 0.5rem;">▶</span> Кулер: Deepcool AK620</li>
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #2C4A5A; color: #A0B8C5;"><span style="color: #64B6AC; margin-right: 0.5rem;">▶</span> Материнская плата: MSI MAG B760 TOMAHAWK WIFI</li>
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #2C4A5A; color: #A0B8C5;"><span style="color: #64B6AC; margin-right: 0.5rem;">▶</span> ОЗУ: 32 ГБ Kingston FURY Beast DDR5 5600 МГц</li>
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #2C4A5A; color: #A0B8C5;"><span style="color: #64B6AC; margin-right: 0.5rem;">▶</span> Видеокарта: NVIDIA RTX 4070 Super 12 ГБ (ASUS Dual)</li>
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #2C4A5A; color: #A0B8C5;"><span style="color: #64B6AC; margin-right: 0.5rem;">▶</span> Накопитель: SSD 2 ТБ WD Black SN770</li>
+                    <li style="padding: 0.8rem 0; border-bottom: 1px solid #2C4A5A; color: #A0B8C5;"><span style="color: #64B6AC; margin-right: 0.5rem;">▶</span> БП: 750 Вт Corsair RM750e</li>
+                    <li style="padding: 0.8rem 0; color: #A0B8C5;"><span style="color: #64B6AC; margin-right: 0.5rem;">▶</span> Корпус: Lian Li LANCOOL 216</li>
+                </ul>
+            </div>
+
+            <div style="background: #1E3A4A; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
+                <h3 style="color: white; margin-bottom: 1rem;">Описание:</h3>
+                <p style="color: #A0B8C5; line-height: 1.8;">Идеальный универсал для 1440p-гейминга и работы. Процессор имеет 14 ядер и отлично справляется с многозадачностью. Кулер Deepcool AK620 держит температуры даже под нагрузкой. Материнская плата оснащена Wi-Fi 6E и качественным VRM. Видеокарта RTX 4070 Super с DLSS 3 выдаёт 120+ FPS в Cyberpunk 2077 с RT Ultra. SSD на 2 ТБ обеспечивает быструю загрузку игр. Блок питания полностью модульный. Сборка сбалансирована, тихая и тянет всё на максималках.</p>
+            </div>
+
+            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <form action="/cart/add/1" method="post" style="flex: 2;">
+                    <button type="submit" class="btn" style="width: 100%;">Добавить в корзину</button>
+                </form>
+                <button class="btn btn-outline" style="flex: 1;">Купить в 1 клик</button>
+            </div>
+
+            <div style="margin-top: 1rem; color: #00aa00;">✅ В наличии</div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 PrimePc — компьютер твоей мечты!</p>
+</footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
